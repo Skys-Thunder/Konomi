@@ -1,0 +1,17 @@
+{
+    "name": "Konomi通知確認",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "通知数を表示します",
+    "content_scripts": [{
+        "matches": ["https://service.lsapp.space/*"],
+        "js": ["script.js"]
+    }],
+    "action":{
+        "default_title": "通知確認",
+        "default_popup": "popup/popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
